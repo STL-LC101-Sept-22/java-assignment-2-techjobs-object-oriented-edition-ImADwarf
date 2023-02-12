@@ -57,7 +57,7 @@ public class JobTest {
     }
 
     @Test
-    public void testToStringContainsCorrectLabelAndData() {
+    public void testToStringContainsCorrectLabelsAndData() {
         Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String someString = job.toString();
         assertEquals(someString, job.toString());
