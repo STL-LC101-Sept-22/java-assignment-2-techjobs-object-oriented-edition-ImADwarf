@@ -56,4 +56,18 @@ public class JobTest {
         assertEquals(anotherChar, '\n');
     }
 
+    @Test
+    public void testToStringContainsCorrectLabelAndData() {
+        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String someString = job.toString();
+        assertEquals(someString, job.toString());
+    }
+
+    @Test
+    public void testToStringHandlesEmptyField() {
+        Job job = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String emptyString = job.toString();
+        assertEquals(emptyString, job.toString());
+    }
+
 }
